@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="header_text">Choose a Date</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://i.postimg.cc/wTDG30TB/yes.gif"
+          alt="Cute animated illustration"
+        />
+      </div>
+      <input
+        type="date"
+        id="datePicker"
+        class="btn"
+        min="2025-02-07"
+        max="2025-02-15"
+      />
+      <button class="btn" onclick="submitDate()">Submit</button>
+    </div>
+
+    <script>
+      function submitDate() {
+        const date = document.getElementById("datePicker").value;
+        if (date) {
+          window.location.href = "thankyou.html";
+        } else {
+          alert("Please select a date between February 7, 2025, and February 15, 2025!");
+        }
+      }
+    </script>
+  </body>
+</html>
